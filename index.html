@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <title>Juego del ahorcado</title>
+</head>
+<body>
+    <div class="background">
+        <button class="play" onclick="play()">Iniciar juego</button>
+        <button class="newWord" onclick="newWord()">Agregar nueva palabra</button>
+        <span class="btnGoBack" onclick="reset()"></span>
+        <span class="inputContainer"></span>
+        <div class="woodLetter">
+            <span id="wordContainer" class="wordContainer"></span>
+            <span id="dashesContainer"></span>
+        </div>
+        <div class="keyboardContainer">
+            <input type="text" class="keyboard" >
+        </div>
+        <span class="livesCounter">
+            <p class="livesText">Vidas</p>
+            <span class="lives">8</span>
+        </span>
+        <span class="finish">
+        <span class="finishText"></span>
+        <span class="correctWord"></span>
+        <button class="btnContinue" onclick="reset()">Continuar</button>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
