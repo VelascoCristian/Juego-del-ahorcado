@@ -51,38 +51,37 @@ const wrongLetter = letter => {
     incorrect++
     switch (incorrect) {
         case 1:
-            document.querySelector(".background").style.setProperty("background","url(assets/error1.png) no-repeat");
-            document.querySelector(".background").style.setProperty("background-size","100% 100%");
+            document.querySelector(".bE1").style.setProperty("display","block");
             document.querySelector(".lives").innerHTML = 6;
             break;
         case 2:
-            document.querySelector(".background").style.setProperty("background","url(assets/error2.png) no-repeat");
-            document.querySelector(".background").style.setProperty("background-size","100% 100%");
+            document.querySelector(".bE1").style.setProperty("display","none");
+            document.querySelector(".bE2").style.setProperty("display","block");
             document.querySelector(".lives").innerHTML = 5;
             break;
         case 3:
-            document.querySelector(".background").style.setProperty("background","url(assets/error3.png) no-repeat");
-            document.querySelector(".background").style.setProperty("background-size","100% 100%");
+            document.querySelector(".bE2").style.setProperty("display","none");
+            document.querySelector(".bE3").style.setProperty("display","block");
             document.querySelector(".lives").innerHTML = 4;
             break;
         case 4:
-            document.querySelector(".background").style.setProperty("background","url(assets/error4.png) no-repeat");
-            document.querySelector(".background").style.setProperty("background-size","100% 100%");
+            document.querySelector(".bE3").style.setProperty("display","none");
+            document.querySelector(".bE4").style.setProperty("display","block");
             document.querySelector(".lives").innerHTML = 3;
             break;
         case 5:
-            document.querySelector(".background").style.setProperty("background","url(assets/error5.png) no-repeat");
-            document.querySelector(".background").style.setProperty("background-size","100% 100%");
+            document.querySelector(".bE4").style.setProperty("display","none");
+            document.querySelector(".bE5").style.setProperty("display","block");
             document.querySelector(".lives").innerHTML = 2;
             break;
         case 6:
-            document.querySelector(".background").style.setProperty("background","url(assets/error6.png) no-repeat");
-            document.querySelector(".background").style.setProperty("background-size","100% 100%");
+            document.querySelector(".bE5").style.setProperty("display","none");
+            document.querySelector(".bE6").style.setProperty("display","block");
             document.querySelector(".lives").innerHTML = 1;
             break;
         case 7:
-            document.querySelector(".background").style.setProperty("background","url(assets/error7.png) no-repeat");
-            document.querySelector(".background").style.setProperty("background-size","100% 100%");
+            document.querySelector(".bE6").style.setProperty("display","none");
+            document.querySelector(".bE7").style.setProperty("display","block");
             document.querySelector(".finish").style.setProperty("display","block");
             document.querySelector(".lives").innerHTML = 0;
             document.querySelector(".finishText").innerHTML = "Perdiste";
@@ -164,6 +163,13 @@ const newWord = () => {
 }
 
 const reset = () => {
+    document.querySelector(".bE1").style.setProperty("display","none");
+    document.querySelector(".bE2").style.setProperty("display","none");
+    document.querySelector(".bE3").style.setProperty("display","none");
+    document.querySelector(".bE4").style.setProperty("display","none");
+    document.querySelector(".bE5").style.setProperty("display","none");
+    document.querySelector(".bE6").style.setProperty("display","none");
+    document.querySelector(".bE7").style.setProperty("display","none");
     document.querySelector(".btnGoBack").style.display = "none";
     document.querySelector(".finish").style.setProperty("display","none");
     document.querySelector("#dashesContainer").style.setProperty("display","none");
