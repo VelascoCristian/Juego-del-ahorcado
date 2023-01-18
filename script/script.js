@@ -4,6 +4,7 @@ let hiddenWord = "";
 let correct = 0;
 let incorrect = 0;
 let isAddWord = false;
+let keyboardAppears = false;
 const selectWord = () => {
     return Math.floor(Math.random() * words.length);
 }
@@ -37,7 +38,6 @@ const correctLetter = letter => {
         if(hiddenWord[i] === letter) {
             correct++;
             dashes(letter);
-            console.log("Acertaste esto "+letter);
             if (correct === hiddenWord.length) {
                 document.querySelector(".finish").style.setProperty("display","block");
                 document.querySelector(".finishText").innerHTML = "Ganaste";
@@ -101,20 +101,28 @@ const letterInput = letter => {
 };
 
 const letterEvent = event => {
-    console.log(event)
-    let newLetter = event.key.toLowerCase();
-    if(newLetter.match(/^[A-Z]$/i) && !pressedLetters.includes(newLetter)) {
-        pressedLetters.push(newLetter);
-        letterInput(newLetter);
+    if (keyboardAppears === true) {
+        let newLetter = event.data;
+        newLetter = newLetter.toLowerCase();
+        if(newLetter.match(/^[A-Z]$/i) && !pressedLetters.includes(newLetter)) {
+            pressedLetters.push(newLetter);
+            letterInput(newLetter);
+        }
+        document.querySelector(".keyboard").value = "";
+    } else {
+        let newLetter = event.key.toLowerCase();
+        if(newLetter.match(/^[A-Z]$/i) && !pressedLetters.includes(newLetter)) {
+            pressedLetters.push(newLetter);
+            letterInput(newLetter);
+        }
     }
-    console.log("Letraspresionadas: "+ pressedLetters);
-
 }
 
 const play = () => {
     incorrect = 0;
     correct = 0;
     pressedLetters = [];
+    keyboardAppears = false;
     document.querySelector(".lives").innerHTML = 7;
     document.querySelector(".background").style.setProperty("background","url(assets/backgroundCity2.png) no-repeat");
     document.querySelector(".background").style.setProperty("background-size","100% 100%");
@@ -129,8 +137,16 @@ const play = () => {
     document.querySelector(".keyboardContainer").style.display = "block";
     if (!isAddWord) hiddenWord = words[selectWord()];
     dashes(hiddenWord);
-    console.log(hiddenWord);
-    document.addEventListener("keydown", letterEvent);
+
+    if (screen.width <= 1000) {
+        keyboardAppears = true;
+        document.querySelector(".keyboard").addEventListener("input", letterEvent);
+
+    } else {
+        document.querySelector(".keyboardContainer").style.display = "none";
+        document.addEventListener("keydown", letterEvent);
+    }
+    
 }
 
 const addWord = () => {

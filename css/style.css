@@ -249,9 +249,9 @@ html {
     }
 
     .play, .newWord {
-        height: 10vh;
-        margin-left: 35vw;
-        width: 30vw;
+        height: 12vh;
+        margin-left: 25vw;
+        width: 50vw;
     }
 
     .newWord {
@@ -273,8 +273,17 @@ html {
     }
 
     .woodLetter {
-        margin-left: 20vw;
-        width: 60vw;
+        height: 25vh;
+        margin-left: 10vw;
+        width: 80vw;
+    }
+
+    .wordContainer {
+        margin-top: 3vh;
+    }
+
+    #dashesContainer {
+        margin: -.5vh 3vw;
     }
 
     .btnGoBack {
@@ -284,16 +293,17 @@ html {
     }
 
     .finish {
-        margin-left: 20vw;
-        width: 60vw;
+        margin-left: 10vw;
+        width: 80vw;
     }
 
     .finishText {
-        margin-left: -8vw;
+        margin-left: -14vw;
     }
 
     .btnContinue {
-        width: 25vw;
+        margin-top: 2vh;
+        width: 40vw;
     }
 
     .keyboardContainer, .keyboard {
@@ -310,8 +320,8 @@ html {
 
     .play, .newWord {
         height: 10vh;
-        margin-left: 25vw;
-        width: 50vw;
+        margin-left: 20vw;
+        width: 60vw;
     }
 
     .inputContainer {
