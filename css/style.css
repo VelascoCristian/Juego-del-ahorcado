@@ -238,7 +238,27 @@ html {
     width: 5rem;
 }
 
+.github, .portfolio {
+    display: block;
+    height: 6vh;
+    margin-left: 1vw;
+    position: absolute;
+    transition: 300ms ease-in-out;
+    width: 3vw;
+}
 
+.github {
+    margin-top: 40vh;
+}
+
+.portfolio {
+    margin-top: 50vh;
+}
+
+.github:hover, .portfolio:hover {
+    cursor: pointer;
+    transform:scale(1.25);
+}
 
 /* MQ */
 
@@ -309,6 +329,11 @@ html {
     .keyboardContainer, .keyboard {
         height: 4rem;
         width: 4rem;
+    }
+
+    .github, .portfolio {
+        height: 5vh;
+        width: 5vw;
     }
 }
 
