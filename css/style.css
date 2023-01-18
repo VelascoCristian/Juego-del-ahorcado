@@ -260,6 +260,47 @@ html {
     transform:scale(1.25);
 }
 
+/* Body part errors */
+.bE1, .bE2, .bE3, .bE4, .bE5, .bE6, .bE7 {
+    display: none;
+    position: absolute;
+}
+
+.bE1 {
+    margin-left: 48.7vw;
+    margin-top: 23vh;
+}
+
+.bE2 {
+    margin-left: 48vw;
+    margin-top: 23vh;
+}
+
+.bE3 {
+    margin-left: 47vw;
+    margin-top: 23vh;
+}
+
+.bE4 {
+    margin-left: 47vw;
+    margin-top: 23.25vh;
+}
+
+.bE5 {
+    margin-left: 46.9vw;
+    margin-top: 23.25vh;
+}
+
+.bE6 {
+    margin-left: 46.9vw;
+    margin-top: 23.25vh;
+}
+
+.bE7 {
+    margin-left: 46.9vw;
+    margin-top: 23.25vh;
+}
+
 /* MQ */
 
 @media screen and (max-width: 768px) {
@@ -334,6 +375,46 @@ html {
     .github, .portfolio {
         height: 5vh;
         width: 5vw;
+    }
+
+    .bE1, .bE2, .bE3, .bE4, .bE5, .bE6, .bE7 {
+        margin-top: 24.5vh;
+    }
+
+    .bE1 {
+        height: 1.7rem;
+        margin-left: 46.5vw;
+        
+    }
+    
+    .bE2 {
+        height: 4rem;
+        margin-left: 45vw;
+    }
+    
+    .bE3 {
+        height: 6rem;
+        margin-left: 42vw;
+    }
+    
+    .bE4 {
+        height: 6rem;
+        margin-left: 42vw;
+    }
+    
+    .bE5 {
+        height: 7.5rem;
+        margin-left: 41vw;
+    }
+    
+    .bE6 {
+        height: 10.5rem;
+        margin-left: 41.25vw;
+    }
+    
+    .bE7 {
+        height: 10.5rem;
+        margin-left: 41.25vw;
     }
 }
 
